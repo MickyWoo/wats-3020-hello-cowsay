@@ -1,7 +1,6 @@
 
-//TODO require cowsay
-
-//TODO require getargs
+const cowsay = require("cowsay");
+const getargs = require("./modules/get-args")
 
 // get first string from command line
 let textArg = getargs.getStringArg()
@@ -10,8 +9,8 @@ let textArg = getargs.getStringArg()
 // default eyes and tail
 if (textArg != null) {
   console.log(cowsay.say({
-    text: textArg,
-    e: "oO",
-    T: "U "
+    text: textArg, // your input is displayed
+    e: "oO",  //eyes fo the cow argument
+    T: "U " //toung arg of cow
   }));
 }
